@@ -20,11 +20,11 @@ import java.util.Collections;
 public class AppUser implements UserDetails {
 
     @Id
-    @SequenceGenerator(name = "student_sequence",
-            sequenceName = "student_sequence",
+    @SequenceGenerator(name = "app_user_sequence",
+            sequenceName = "app_user_sequence",
             allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator = "student_sequence")
+            generator = "app_user_sequence")
 
     private Long id;
     private String firstName;
