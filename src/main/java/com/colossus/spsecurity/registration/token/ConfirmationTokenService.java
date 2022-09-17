@@ -31,7 +31,7 @@ public class ConfirmationTokenService {
         repo.save(confirmationToken);
 
         AppUser appUser = appUserRepository.getById(confirmationToken.getAppUser().getId());
-        if (appUser.isEnabled()) throw new IllegalStateException("user already enabled");
+        //if (appUser.isEnabled()) throw new IllegalStateException("user already enabled");
 
         appUser.setEnabled(true);
         appUserRepository.save(appUser);
